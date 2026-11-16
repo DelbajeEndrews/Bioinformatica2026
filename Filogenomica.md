@@ -269,7 +269,7 @@ O que cada opção faz:
 
 - `-s supermatriz.fa`: o alinhamento de entrada.
 - `-m MFP`: o IQ-TREE testa vários modelos de evolução de proteínas e escolhe sozinho o melhor (ModelFinder).
-- `-B 100``0`: calcula o suporte de cada ramo com 1000 réplicas de *ultrafast bootstrap *
+- `-B 1000`: calcula o suporte de cada ramo com 1000 réplicas de *ultrafast bootstrap *
 - Alternativa: você pode rodar o iqtree indicando o grupo externo.&#32;
 
   ```bash
