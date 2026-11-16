@@ -152,7 +152,7 @@ Deve aparecer um código como `XP_...` ou `NP_...`: é a proteína desse genoma 
 
 **Obs**: O BLAST só escreve linhas na saída para queries que encontraram um hit. Portanto, se alguma sequência do arquivo `RPO21.fasta` não tiver alinhamento que satisfaça o limiar de e-value, ela **não aparecerá** no arquivo `melhor_hit.txt`
 
-**Passo B — pegar a sequência.** O `seqkit grep` procura no genoma a proteína cujo nome está em `melhor_hit.txt`` ``(accession da proteina)` e mostra a sequência dela:
+**Passo B — pegar a sequência.** O `seqkit grep` procura no genoma a proteína cujo nome está em `melhor_hit.txt (accession da proteina)` e mostra a sequência dela:
 
 ```bash
 cd ~/filogenomica
