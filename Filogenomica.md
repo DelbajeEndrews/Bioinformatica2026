@@ -70,8 +70,8 @@ Repita para cada espécie escolhida, incluindo *S. cerevisiae* e *S. pombe*:
 2. Clique no genoma marcado como **reference genome** (código começando com **GCF\_**).
 3. Clique em **Download**, marque **somente Protein (FASTA)** e baixe o arquivo `.zip`.
 4. Na pasta Downloads (ou Transferências), clique com o botão direito no `.zip` e escolha **Extrair aqui**.
-5. Entre nas pastas `ncbi_dataset` > `data` > `GCF_...` e encontre o arquivo **`protein.faa`**. Renomeie o arquivo FASTA com o nome da espécie + o GCF (GCA) accession code.
-6. Copie esse arquivo renomeado para a sua pasta **`f`****`ilogenomica`**.
+5. Entre nas pastas `ncbi_dataset` > `data` > `GCF_...` e encontre o arquivo **`protein.faa`**. Renomeie o arquivo FASTA com o nome da espécie + o GCF (ou GCA) accession code.
+6. Copie esse arquivo renomeado para a sua pasta **`filogenomica`**.
 
 No fim, confira no terminal:
 
@@ -152,7 +152,7 @@ Deve aparecer um código como `XP_...` ou `NP_...`: é a proteína desse genoma 
 
 **Obs**: O BLAST só escreve linhas na saída para queries que encontraram um hit. Portanto, se alguma sequência do arquivo `RPO21.fasta` não tiver alinhamento que satisfaça o limiar de e-value, ela **não aparecerá** no arquivo `melhor_hit.txt`
 
-**Passo B — pegar a sequência.** O `seqkit grep` procura no genoma a proteína cujo nome está em `melhor_hit.txt`` ``(``acces``sion`` ``d``a``  prote ``í``n``a``)` e mostra a sequência dela:
+**Passo B — pegar a sequência.** O `seqkit grep` procura no genoma a proteína cujo nome está em `melhor_hit.txt`` ``(accession da proteina)` e mostra a sequência dela:
 
 ```bash
 cd ~/filogenomica
