@@ -3,4 +3,4 @@
 ### Construção de árvore filogenômica
 [Acessar guia](Bioinformatica2026/Analise dn_ds.md)
 ### Análise de seleção natural dN/dS
-[Acessar guia](Bioinformatica2026/Filogenomica.md)
+[Acessar guia](Filogenomica.md)
