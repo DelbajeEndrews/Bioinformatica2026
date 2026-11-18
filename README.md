@@ -1,6 +1,6 @@
 ## Atividades práticas da disciplina
 
----
+***
 
 ## Aula 11
 ### Construção de árvore filogenômica
