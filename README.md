@@ -8,7 +8,7 @@
 
 ---
 
-## Aula 12
+## Aula 12 - Metagenômica
 ### Análise de amplicons 16S rRNA
 [Acessar guia](Análise%20de%20amplicons%2016S%20com%20Kraken2.md)
 ### Análise multivariada e geração de gráficos
