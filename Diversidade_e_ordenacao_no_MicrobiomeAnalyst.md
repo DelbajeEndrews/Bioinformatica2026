@@ -1,21 +1,16 @@
-# Diversidade e estatística multivariada no MicrobiomeAnalyst: roteiro passo a passo
+# Diversidade e estatística multivariada no MicrobiomeAnalyst
 
 ## O que vamos fazer
 
-Na aula vimos como ler gráficos de composição, de diversidade alfa e de ordenação (PCoA). Agora vamos **produzir** esses gráficos e interpretá-los com uma ferramenta online, o **MicrobiomeAnalyst** ([microbiomeanalyst.ca](https://www.microbiomeanalyst.ca)), sem precisar programar a parte estatística.
+Na aula vimos como ler gráficos de composição, de diversidade alfa e de ordenação (PCoA). Agora vamos **produzir** esses gráficos e interpretá-los na plataforma online **MicrobiomeAnalyst** ([microbiomeanalyst.ca](https://www.microbiomeanalyst.ca)).
 
-A pergunta é a mesma da atividade com o Kraken2: **a comunidade do intestino do camundongo é diferente logo após o desmame (dias 0 a 9) e na fase adulta (dias 141 a 150)?**
+Usaremos os dados processados com o Kraken2. **comunidade do intestino do camundongo logo após o desmame (dias 0 a 9) e na fase adulta (dias 141 a 150)**
 
 A atividade tem duas partes:
 
-| Parte | Onde | O que faz |
-| --- | --- | --- |
-| A | terminal | junta os relatórios do Kraken2 em três tabelas no formato do MicrobiomeAnalyst |
-| B | navegador | envia as tabelas e faz composição, diversidade alfa, PCoA e PERMANOVA |
+> **Atividade requer os arquivos da antividade anterior gerados pelo Kraken2?**
 
-> **Não fez a atividade com o Kraken2?** Pule a parte A. Na parte B, use um dos **conjuntos de dados de exemplo** que o próprio MicrobiomeAnalyst oferece na página de envio de dados, e responda às mesmas perguntas para esse conjunto.
-
-## Parte A — Montar as tabelas (terminal)
+## Parte A — Montar as tabelas
 
 ### A.1 O que o MicrobiomeAnalyst precisa
 
