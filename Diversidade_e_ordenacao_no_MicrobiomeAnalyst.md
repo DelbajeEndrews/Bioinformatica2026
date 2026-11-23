@@ -4,11 +4,11 @@
 
 Na aula vimos como ler gráficos de composição, de diversidade alfa e de ordenação (PCoA). Agora vamos **produzir** esses gráficos e interpretá-los na plataforma online **MicrobiomeAnalyst** ([microbiomeanalyst.ca](https://www.microbiomeanalyst.ca)).
 
-Usaremos os dados processados com o Kraken2. **comunidade do intestino do camundongo logo após o desmame (dias 0 a 9) e na fase adulta (dias 141 a 150)**
+Usaremos os dados processados com o Kraken2: **comunidade do intestino do camundongo logo após o desmame (dias 0 a 9) e na fase adulta (dias 141 a 150)**
 
 A atividade tem duas partes:
 
-> **Atividade requer os arquivos da antividade anterior gerados pelo Kraken2?**
+> **Atividade requer os arquivos da atividade anterior gerados pelo Kraken2?**
 
 ## Parte A — Montar as tabelas
 
@@ -22,13 +22,13 @@ O MicrobiomeAnalyst aceita três arquivos de texto separados por tabulação:
 | `tabela_taxonomia.txt` | a linhagem de cada gênero (Kingdom, Phylum, Class, Order, Family, Genus) | `#TAXONOMY` |
 | `metadados.txt` | o grupo de cada amostra | `#NAME` |
 
-É a **tabela táxon × amostra** da aula. Como o banco SILVA tem vários gêneros chamados `uncultured` (em famílias diferentes), cada gênero recebe um código único (`GEN_001`, `GEN_002`…), e o nome real fica na tabela de taxonomia.
+É a **tabela táxon × amostra** da aula. O banco SILVA tem vários gêneros chamados `uncultured` (em famílias diferentes), por isso cada gênero recebe um código único (`GEN_001`, `GEN_002`…), e o nome real fica na tabela de taxonomia.
 
 A amostra Mock fica de fora: ela é um controle, não faz parte da comparação entre os grupos.
 
 ### A.2 Criar o script
 
-Abra o terminal, ative o ambiente da atividade anterior e entre na pasta:
+Abra o terminal, ative o environment da atividade anterior e entre na pasta:
 
 ```bash
 micromamba activate metagenomica
@@ -36,9 +36,11 @@ cd ~/metagenomica
 ls relatorios
 ```
 
-Devem aparecer os relatórios `.txt` das 20 amostras.
+Devem aparecer os relatórios `.txt` das amostras.
 
 Abra o **Editor de Texto**, cole o conteúdo abaixo e salve na pasta `metagenomica` com o nome **`monta_tabelas.sh`**. Não é preciso entender cada linha do `awk`: os comentários mostram o que cada bloco faz.
+
+Obs: Diversos programas e pipelines de análises de dados metagenômicos (ex: QIIME2), por padrão, geram esses arquivos entre os resultados principais e podem ter algumas variações. Aqui usaremos um código especialmente escrito para os dados gerados pelo Kraken2.
 
 ```bash
 #!/bin/bash
@@ -105,6 +107,7 @@ head -n 5 tabela_abundancia.txt
 head -n 5 tabela_taxonomia.txt
 cat metadados.txt
 ```
+Recomendação: Abra os três arquivos .txt criados e os interprete. Observe como as informações entre eles estão conectadas.
 
 O `metadados.txt` deve ter 19 amostras (9 do grupo `Dias_0a9` e 10 do grupo `Dias_141a150`). Copie os três arquivos para um local fácil de achar no navegador (por exemplo, a Área de Trabalho).
 
@@ -112,13 +115,14 @@ O `metadados.txt` deve ter 19 amostras (9 do grupo `Dias_0a9` e 10 do grupo `Dia
 
 ### B.1 Enviar os dados
 
-1. Abra [microbiomeanalyst.ca](https://www.microbiomeanalyst.ca) e clique em **Start Here** (ou **Get Started**).
+1. Abra [microbiomeanalyst.ca](https://www.microbiomeanalyst.ca) e clique em **Click Here to Start**.
 2. Escolha o módulo **Marker Data Profiling** (MDP), próprio para dados de gene marcador como o 16S.
 3. Na página de envio, escolha o formato **texto/tabela** (*Plain text*, `.txt`) e envie:
-   - **Taxonomic profile / abundance:** `tabela_abundancia.txt`;
+   - **OTU/ASV Table:** `tabela_abundancia.txt`;
    - **Metadata file:** `metadados.txt`;
-   - **Taxonomy table:** `tabela_taxonomia.txt` (indique que a taxonomia está em um **arquivo separado**, e não dentro da tabela de abundância).
-4. Clique em **Submit** e siga para a verificação dos dados. Confira se aparecem **19 amostras** e o fator **Grupo** com dois níveis.
+   - **Taxonomy table:** `tabela_taxonomia.txt`;
+   - Em **Taxonomy labels:** selecione a opção `Not specific / Other`.
+4. Clique em **Submit** e siga para a verificação dos dados.
 
 ### B.2 Filtragem e normalização
 
