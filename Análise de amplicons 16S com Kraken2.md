@@ -147,8 +147,7 @@ Agora repetimos a classificação para as 20 amostras com um loop `for`, dentro 
 - `${r1/_R1_/_R2_}` troca `_R1_` por `_R2_` no nome do arquivo que está dentro da variável`r1`, para achar o par de cada R1;
 - `${amostra%%_*}` apaga tudo a partir do primeiro `_`, deixando só o nome da amostra (`F3D0_S188_L001_R1_001.fastq` vira `F3D0`).
 
-1. Abra o **Editor de Texto** do Ubuntu.
-2. Copie e cole todo o conteúdo abaixo.
+1. Abra o **Editor de Texto** do Ubuntu e cole o conteúdo abaixo para criar um novo script.
 
 ```bash
 #!/bin/bash
@@ -173,8 +172,8 @@ done
 echo "Pronto!"
 ```
 
-3. Salve o arquivo na pasta **`metagenomica`** com o nome **`classifica.sh`**.
-4. No terminal, execute o script:
+2. Salve o arquivo na pasta **`metagenomica`** com o nome **`classifica.sh`**.
+3. No terminal, execute o script:
 
 ```bash
 cd ~/metagenomica
