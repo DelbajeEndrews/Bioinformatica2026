@@ -11,3 +11,5 @@
 ## Aula 12
 ### Análise de amplicons 16S rRNA
 [Acessar guia](Análise%20de%20amplicons%2016S%20com%20Kraken2.md)
+### Análise multivariada e geração de gráficos
+[Acessar guia](Diversidade_e_ordenacao_no_MicrobiomeAnalyst)
