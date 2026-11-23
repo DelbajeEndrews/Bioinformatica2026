@@ -128,49 +128,28 @@ O `metadados.txt` deve ter 19 amostras (9 do grupo `Dias_0a9` e 10 do grupo `Dia
 
 O site sugere filtros para remover gêneros muito raros (por exemplo, que aparecem em poucas amostras ou com poucas reads). **Mantenha os valores padrão.**
 
-Na normalização, mantenha também o padrão e anote quais opções foram usadas. Lembre-se da aula: as amostras têm números diferentes de reads, e por isso as contagens brutas não podem ser comparadas diretamente (rarefação ou transformação em proporções).
+Na normalização, mantenha também o padrão e observe quais opções foram usadas. Lembre-se da aula: as amostras têm números diferentes de reads, e por isso as contagens brutas não podem ser comparadas diretamente (rarefação ou transformação em proporções deve ser aplicada).
 
 ### B.3 Composição: gráfico de barras empilhadas
 
 1. No menu de análises, abra **Stacked Bar / Area Plot**.
 2. Escolha o nível taxonômico **Phylum** e depois **Genus**, com agrupamento por amostra.
-3. Salve as duas figuras (botão de download da imagem).
+3. As figuras podem ser salvas com o botão de download da imagem no lado esquerdo da página.
+
+Obs: Para retornar na página de seleção de resultados clique em "Analysis Overview" no topo da página.
 
 ### B.4 Diversidade alfa
 
 1. Abra **Alpha Diversity**.
 2. Escolha o índice **Shannon**, nível **Genus**, e o fator **Grupo** para separar as amostras.
-3. Escolha a opção de gráfico em **box plot** e anote o resultado do teste estatístico que aparece junto (valor de p).
+3. Escolha a opção de gráfico em **box plot** e observe o resultado do teste estatístico que aparece junto (valor de p).
 4. Repita com o índice **Observed** (riqueza observada).
 
 ### B.5 Diversidade beta e ordenação (PCoA)
 
 1. Abra **Beta Diversity**.
-2. Escolha o método de ordenação **PCoA**, a distância **Bray-Curtis**, o nível **Genus** e colora as amostras pelo fator **Grupo**.
-3. Anote:
+2. Escolha o método de ordenação **PCoA**, a distância **Bray-Curtis**, o nível **Genus** e a coloração das amostras pelo fator **Grupo**.
+3. Observe:
    - a porcentagem de variação explicada pelos eixos 1 e 2;
    - o resultado da **PERMANOVA** que o site mostra junto do gráfico (valor de **R²** e de **p**).
-4. Repita trocando a distância para **Jaccard** (presença/ausência) e compare os dois gráficos.
-
-### B.6 Comparar com o terminal (opcional)
-
-Se você fez a atividade com o Kraken2, compare o Shannon calculado pelo site com o do arquivo `diversidade_alfa.txt`. Os valores não precisam ser idênticos: o site filtra gêneros raros e normaliza os dados antes do cálculo.
-
-## Perguntas para o relatório
-
-1. Quais filos dominam as amostras? Algum filo muda claramente de proporção entre os dois grupos?
-2. Qual grupo tem maior diversidade alfa (Shannon e riqueza observada)? A diferença foi estatisticamente significativa?
-3. No gráfico de PCoA (Bray-Curtis), as amostras dos dois grupos se separam? Quanto da variação os dois primeiros eixos explicam juntos?
-4. Interprete o R² e o p da PERMANOVA com suas próprias palavras.
-5. O padrão da PCoA mudou ao usar a distância de Jaccard em vez de Bray-Curtis? O que essa diferença diz sobre a comunidade: a mudança entre os grupos está mais em **quem está presente** ou em **quanto de cada um**?
-6. Por que a amostra Mock foi deixada de fora da comparação?
-
-## Se algo der errado
-
-| Problema | O que fazer |
-| --- | --- |
-| `ls relatorios` não mostra os relatórios | Faça antes a atividade com o Kraken2 (passos 1 a 4) ou use os dados de exemplo do MicrobiomeAnalyst. |
-| `metadados.txt` tem menos de 19 amostras | Confira `ls relatorios`: falta o relatório de alguma amostra. Rode `bash classifica.sh` de novo. |
-| O site diz que os nomes das amostras não correspondem | Os arquivos não podem ser editados em planilha antes do envio (a planilha pode trocar tabulações por vírgulas). Rode `bash monta_tabelas.sh` de novo e envie os arquivos originais. |
-| O site diz que o formato da taxonomia não foi reconhecido | Confira se a opção de **taxonomia em arquivo separado** foi marcada e se o arquivo enviado nesse campo é o `tabela_taxonomia.txt`. |
-| O site está lento ou fora do ar | Tente mais tarde. O MicrobiomeAnalyst é um serviço público e pode ficar sobrecarregado nos horários de pico. |
+4. Repita trocando a distância para **Jaccard** (baseado em presença/ausência de táxons/feature) e compare os dois gráficos.
