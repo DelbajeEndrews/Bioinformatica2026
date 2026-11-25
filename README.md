@@ -1,8 +1,8 @@
 ## Atividades práticas da disciplina
 
 ## Aula 11
-### Construção de árvore filogenômica ([acessar](Analise%20dn_ds.md))
-### Análise de seleção natural dN/dS ([acessar](Filogenomica.md))
+### Construção de árvore filogenômica ([acessar](Filogenomica.md))
+### Análise de seleção natural dN/dS ([acessar](Analise%20dn_ds.md))
 
 ---
 
